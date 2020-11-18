@@ -145,11 +145,11 @@ a{
         text-decoration: none;
         color: rgb(102, 102, 102);
         font-family: 'Heebo', sans-serif;
-        font-size: 0.8em;
+        font-size: 0.75em;
       }
       img.schedule{
           margin-right: 4px;
-          height: 0.81em;
+          height: 0.8em;
       }
       img.logo{
         height:3em ;
