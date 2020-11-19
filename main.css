@@ -30,14 +30,23 @@ body {
     justify-content: center;
     align-items: center;
 }
-.img-container{
+.home .img-container{
     margin-top: 5em;
     display: flex;
     display:flex;
     justify-content: center;
     align-items: center;
 }
-  span{
+
+.img-container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+	display: flex;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+ .home  span{
       color: rgb(87, 87, 87);
       font-size: 4em;
       text-align: center;
@@ -78,7 +87,7 @@ p{
     letter-spacing: 3px;
     margin-bottom: 1.5em;
 }
-span{
+.home span{
     font-size: 3em;
 
 }
@@ -108,7 +117,7 @@ a{
         letter-spacing: 3px;
         margin-bottom: 2.5em;
     }
-    span{
+    .home span{
         font-size: 2em;
     
     }
@@ -155,4 +164,46 @@ a{
         height:3em ;
       margin-bottom: 7em;
       }
+}
+.large_grid .item .image,
+.large_grid .item .area{
+    box-sizing: border-box;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+}
+.large_grid .item:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}
+.scroll-container.standard .medium_grid .item.visible {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+	.large_grid .item .image img,
+	.large_grid .item .area	{
+    max-width: none;
+    margin: 0;
+    display: block;
+    transition: transform .2s ease-out;
+    object-position: 50% 50%;
+    object-fit: cover;
+   
+}
+.large_grid .item .image,
+.large_grid .item .area{
+    transform: translate3d(0,50px,0);
+    opacity:1;
+}
+.large_grid .item.animate-from-bottom .area, .large_grid .item.animate-from-top .area, .large_grid .item .area,
+.large_grid .item.animate-from-bottom .image, .large_grid .item.animate-from-top .image, .large_grid .item .image {
+    transition: transform 5s cubic-bezier(.18,1,.21,1),opacity 5s cubic-bezier(.18,1,.21,1);
+}
+.large_grid .item.visible .area,
+.large_grid .item.visible .image {
+    opacity: 1;
+    transform: translateZ(0);
 }
